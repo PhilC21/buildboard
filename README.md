@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BuildBoard
 
-## Getting Started
+<img alt="BuildBoard Homepage" src="assets/screenshots/HomePage.png" width="720px">
 
-First, run the development server:
+BuildBoard is a full-stack project management dashboard that helps users organize, track, and manage development projects in one place. It includes project CRUD functionality, task tracking, project updates, progress indicators, and a responsive dashboard interface.
+
+## Live Demo
+
+<https://buildboard-vert.vercel.app/>
+
+## Features
+
+- Create, view, edit, and delete projects
+- View dashboard stats, recent projects, and project activity
+- Track project status and priority with dynamic badges
+- Track project progress with completion percentage and progress bar
+- Add project updates through a modal interface
+- Manage project tasks with add, complete, and delete functionality
+- Responsive layout with desktop sidebar and mobile menu navigation
+- Supabase/PostgreSQL database integration
+- Next.js API routes for backend functionality
+
+## Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** Next.js API Routes
+- **Database:** Supabase / PostgreSQL
+- **Deployment:** Vercel
+- **Icons:** Heroicons
+
+## Project Structure
+
+- `app/` - pages and API routes
+- `components/` - reusable UI components
+- `lib/` - shared utilities and styles
+
+## Database Tables
+
+- **projects** - stores project details, status, priority, and progress
+- **updates** - stores project update entries
+- **tasks** - stores project to-do items and completion status
+
+![Database](assets/screenshots/DatabaseTables.png)
+
+## Installation & Setup
+
+**1. Clone the Repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/PhilC21/buildboard.git
+cd buildboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Install dependencies**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**3. Set up environment variables**
 
-## Learn More
+Create `.env.local` file in the root filling in with your actual values from Supabase:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_publishable_key
+SUPABASE_SECRET_KEY=your_supabase_secret_key
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*Note: For deployment, set `NEXT_PUBLIC_APP_URL` to your deployed (Vercel or otherwise) URL.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**4. Run the development server**
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+Then open <http://localhost:3000> in your web browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Reflection
+
+BuildBoard was developed as a full-stack application using Next.js and Supabase, with the goal of creating a practical project management tool that feels clean and easy to use. I hadn't worked with Supabase before and I am still relatively new to Next.js, giving me a perfect opportunity to work with and gain some experience with both. I wanted to focus on both functionality and usability, making sure the interface stayed responsive while supporting full CRUD operations for projects, tasks, and updates.
+
+I approached the development in stages. I started by setting up the database and API routes for the projects and building out the general layout and UI. Then, I transitioned to building out the core features, and finally spent time refining the UI and improving responsiveness across different screen sizes.
+
+One of the more challenging parts was dealing with responsive layouts, especially preventing overflow issues on smaller screens. I also put effort into organizing reusable components and centralizing Tailwind styles, which made the codebase easier to manage as the project grew.
+
+Overall, this project gave me a much better understanding of how a full-stack application comes together, from API design to database integration and frontend responsiveness. It also helped me think more carefully about structure, scalability, and user experience.
+
+*Note: AI tools were used to assist with debugging, planning features, improving responsiveness, and drafting documentation. All suggestions were reviewed and adapted to fit the needs of the project.*
+
+## Screenshots
+
+### Home Page
+<img alt="Home Page" src="assets/screenshots/HomePage.png" width="50%">
+
+
+### Projects Page
+<img alt="Projects Page" src="assets/screenshots/ProjectsPage.png" width="50%">
+
+
+### Project Details
+<img alt="Project Details" src="assets/screenshots/ProjectDetailsPage.png" width="50%">
+
+### Mobile View
+<img alt="Mobile View" src="assets/screenshots/MobileView.jpeg" width="25%">
