@@ -89,7 +89,7 @@ One of the more challenging parts was dealing with responsive layouts, especiall
 
 Overall, this project gave me a much better understanding of how a full-stack application comes together, from API design to database integration and frontend responsiveness. It also helped me think more carefully about structure, scalability, and user experience.
 
-*Note: AI tools were used to assist with debugging, planning features, improving responsiveness, and drafting documentation. All suggestions were reviewed and adapted to fit the needs of the project.*
+*Note: AI tools were used to assist with troubleshooting, debugging, planning features, improving responsiveness, and drafting documentation. All suggestions were reviewed and adapted to fit the needs of the project.*
 
 ## Screenshots
 

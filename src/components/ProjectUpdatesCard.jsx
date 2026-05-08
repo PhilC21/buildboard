@@ -41,7 +41,7 @@ export default function ProjectUpdatesCard({ projectId }) {
                 onClick={() => setIsModalOpen(true)}
                 className={`${styles.panel.box} ${styles.panel.clickable}`}
             >
-                <p className={styles.meta.label}>Updates</p>
+                <p className={styles.meta.label}>Updates (Click to Add/View All)</p>
 
                 {isLoading ? (
                     <p className="mt-2 text-slate-600">Loading updates...</p>
